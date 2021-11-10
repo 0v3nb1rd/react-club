@@ -2,8 +2,8 @@ import React from 'react';
 
 export const Hero = () => {
   return (
-    <div className="hero min-h-screen bg-base-200">
-      <div className="flex-col hero-content lg:flex-row-reverse">
+    <section className="hero min-h-screen bg-base-200">
+      <div className="flex hero-content justify-center">
         <img
           src="https://picsum.photos/id/1005/600/600"
           className="max-w-sm rounded-lg shadow-2xl"
@@ -16,9 +16,8 @@ export const Hero = () => {
             excepturi exercitationem quasi. In deleniti eaque aut repudiandae et
             a id nisi.
           </p>
-          <button className="btn btn-primary">Get Started</button>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
