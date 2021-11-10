@@ -1,12 +1,8 @@
 import React from 'react';
 
-export const Header = (props) => {
+export const Nav = () => {
   return (
-    <header className="navbar mb-2 shadow-lg bg-neutral text-neutral-content ">
-      <div className="px-2 mx-2 navbar-start">
-        <span className="text-lg font-bold">daisyUI</span>
-      </div>
-
+    <>
       <div className="hidden px-2 mx-2 navbar-center lg:flex">
         <div className="flex items-stretch">
           <a href="./" className="btn btn-ghost btn-sm rounded-btn">
@@ -55,6 +51,6 @@ export const Header = (props) => {
           </svg>
         </button>
       </div>
-    </header>
+    </>
   );
 };
