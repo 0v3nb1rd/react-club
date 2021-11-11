@@ -19,7 +19,7 @@ export const Footer = () => {
             </p>
           </div>
 
-          {/* <Logo className="absolute left-0 right-0 justify-center" /> */}
+          <Logo className="absolute left-2/4 transform -translate-x-2/4" />
 
           <div className="md:place-self-center md:justify-self-end">
             <div className="flex max-h-8">
