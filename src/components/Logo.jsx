@@ -7,7 +7,7 @@ export const Logo = (props) => {
 
   return (
     <a href="./" className={cn('logo px-2 flex items-center', className)}>
-      <img className="mr-2" src={logoImg} alt="image logo" />
+      <img className="mr-2" src={logoImg} alt="logo " />
       <span className="text-lg font-bold uppercase font-mono tracking-widest leading-4">
         React <br /> Club
       </span>
