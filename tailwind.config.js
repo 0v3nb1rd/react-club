@@ -7,6 +7,7 @@ module.exports = {
   variants: {
     extend: {
       animation: ['motion-reduce'],
+      translate: ['active', 'group-hover'],
     },
   },
   plugins: [require('daisyui')],
