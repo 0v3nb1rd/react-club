@@ -5,11 +5,13 @@ module.exports = {
     extend: {},
   },
   variants: {
-    extend: {},
+    extend: {
+      animation: ['motion-reduce'],
+    },
   },
   plugins: [require('daisyui')],
   daisyui: {
-    styled: true,
+    // styled: true,
     themes: false,
     rtl: false,
   },
