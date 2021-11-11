@@ -8,6 +8,7 @@ module.exports = {
     extend: {
       animation: ['motion-reduce'],
       translate: ['active', 'group-hover'],
+      dropShadow: ['responsive', 'hover'],
     },
   },
   plugins: [require('daisyui')],

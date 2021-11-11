@@ -13,7 +13,7 @@ export const App = () => {
         <section className="container mx-auto -mt-20 mb-20">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <div className="card text-center group">
-              <figure className="px-10 pt-10 transition transform group-hover:-translate-y-1">
+              <figure className="px-10 pt-10  transition transform filter drop-shadow-lg group-hover:-translate-y-1">
                 <img
                   src={postImg1}
                   className="rounded-xl object-cover h-full"
@@ -31,7 +31,7 @@ export const App = () => {
             </div>
 
             <div className="card text-center group">
-              <figure className="px-10 pt-10 h-full transition transform group-hover:-translate-y-1">
+              <figure className="px-10 pt-10 h-full transition transform filter drop-shadow-lg group-hover:-translate-y-1">
                 <img
                   src={postImg2}
                   className="rounded-xl object-cover h-full"
@@ -49,7 +49,7 @@ export const App = () => {
             </div>
 
             <div className="card text-center group">
-              <figure className="px-10 pt-10 h-full transition transform group-hover:-translate-y-1">
+              <figure className="px-10 pt-10 h-full transition transform filter drop-shadow-lg group-hover:-translate-y-1">
                 <img
                   src={postImg3}
                   className="rounded-xl object-cover h-full"

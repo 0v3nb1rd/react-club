@@ -7,11 +7,11 @@ export const Hero = () => {
       <div className="flex hero-content justify-center">
         <img
           src={heroImg}
-          className="max-w-xl rounded-lg shadow-2xl"
+          className="max-w-2xl rounded-lg shadow-2xl"
           alt="Hero images"
         />
         <div>
-          <h1 className="mb-5 text-5xl font-bold">Welcome to React Club 👋</h1>
+          <h1 className="mb-5 text-5xl font-bold">👋 Welcome React Club</h1>
           <p className="mb-5">
             We offer an assortment of quality services to build and preserve the
             public image of your brand. Our dedicated and experienced
