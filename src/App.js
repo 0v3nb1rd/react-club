@@ -1,4 +1,4 @@
-import { Header, Footer, Hero, Post, Button } from './components';
+import { Header, Footer, Hero, Post, Button } from './Components';
 import { posts } from './store';
 export const App = () => {
   return (

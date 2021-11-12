@@ -1,5 +1,5 @@
 import React from 'react';
-import { Nav, Logo } from './';
+import { Nav, Logo } from '.';
 
 export const Header = () => {
   return (
