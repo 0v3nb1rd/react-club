@@ -3,7 +3,7 @@ import { Nav, Logo } from '.';
 
 export const Header = () => {
   return (
-    <header className="navbar mb-2 shadow-lg bg-neutral text-neutral-content py-3">
+    <header className="navbar  shadow-lg bg-neutral text-neutral-content py-4">
       <div className="container  mx-auto">
         <Logo className="absolute" />
         <Nav />
