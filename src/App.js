@@ -7,8 +7,8 @@ export const App = () => {
     <>
       <Header />
       <main className=" mt-20 ">
-        <Home posts={posts} />
-        {/* <Catalog /> */}
+        {/* <Home posts={posts} /> */}
+        <Catalog /> 
       </main>
       <Footer />
     </>
