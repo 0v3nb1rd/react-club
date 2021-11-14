@@ -2,7 +2,6 @@ import React from 'react';
 import monic from '../assets/img/products/aoc.png';
 
 export const Card = ({ product }) => {
-  console.log(product);
   return (
     <div className="max-w-xs	h-full">
       <div className=" relative bg-gradient-to-bl from-yellow-100 to-purple-300 shadow-lg sm:rounded-3xl p-8 pt-14  transition transform hover:scale-105 ">
@@ -29,9 +28,7 @@ export const Card = ({ product }) => {
           </p>
         </div>
         <div className="mt-4">
-          <a href className="btn btn-natural btn-block">
-            View more
-          </a>
+          <a className="btn btn-natural btn-block">View more</a>
         </div>
       </div>
     </div>
