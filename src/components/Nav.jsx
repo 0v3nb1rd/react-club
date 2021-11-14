@@ -7,7 +7,7 @@ export const Nav = () => {
       <div className="hidden px-2 mx-auto navbar-center lg:flex">
         <ul className="flex items-stretch">
           <li className="mx-2">
-            <Link to='/home' className="btn btn-accent btn-md px-11">
+            <Link to='/' className="btn btn-accent btn-md px-11">
               Home
             </Link>
           </li>

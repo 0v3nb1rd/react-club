@@ -8,7 +8,7 @@ export const Catalog = ({ products, filters }) => {
         <div className="container mx-auto">
           <div className="h-20 rounded-box bg-base-300  place-items-center flex items-center justify-between px-5">
             <div className="flex ">
-              {filters.map((el) => (
+              {filters && filters.map((el) => (
                 <Button
                   key={el.id}
                   className="mr-5 no-animation shadow-sm px-20 py-2 bg-white text-gray-700 hover:bg-gray-50 border-0"
@@ -34,7 +34,7 @@ export const Catalog = ({ products, filters }) => {
       </section>
       <section className="container  mx-auto mt-8 mb-20">
         <ul className="flex justify-around items-stretch	">
-          {products.map((el) => (
+          {products && products.map((el) => (
             <li key={el.id} className="h-full">
               <Card product={el} />
             </li>
