@@ -8,7 +8,7 @@ export const Catalog = ({ products, filters }) => {
         <div className="container mx-auto">
           <div className="h-20 rounded-box bg-base-300  place-items-center flex items-center justify-between px-5">
             <ul className="flex ">
-              {filters && filters.map((el) => <Select el={el} />)}
+              {filters && filters.map((el) => <Select key={el.id} el={el} />)}
             </ul>
             <Button className="btn-natural px-14">Aply</Button>
           </div>
