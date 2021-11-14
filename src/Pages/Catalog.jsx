@@ -7,15 +7,15 @@ export const Catalog = ({ products, filters }) => {
       <section className="flex flex-col w-full mt-5">
         <div className="container mx-auto">
           <div className="h-20 rounded-box bg-base-300  place-items-center flex items-center justify-between px-5">
-            <div className="flex ">
+            <ul className="flex ">
               {filters.map((el) => (
-                <Button
+                <li
                   key={el.id}
-                  className="mr-5 no-animation shadow-sm px-20 py-2 bg-white text-gray-700 hover:bg-gray-50 border-0"
+                  className="btn mr-5 no-animation shadow-sm py-2 bg-white text-gray-700 hover:bg-gray-50 border-0"
                 >
                   {el.name}
                   <svg
-                    className="-mr-1 ml-2 h-5 w-5"
+                    className="-mr-1 h-5 w-5 ml-20"
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 20 20"
                   >
@@ -25,9 +25,9 @@ export const Catalog = ({ products, filters }) => {
                       clipRule="evenodd"
                     />
                   </svg>
-                </Button>
+                </li>
               ))}
-            </div>
+            </ul>
             <Button className="btn-natural px-14">Aply</Button>
           </div>
         </div>
