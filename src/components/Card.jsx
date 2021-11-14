@@ -1,5 +1,4 @@
 import React from 'react';
-import monic from '../assets/img/products/aoc.png';
 
 export const Card = ({ product }) => {
   return (
