@@ -1,6 +1,6 @@
 import { Header, Footer } from './components';
 import { Home, Catalog } from './Pages';
-import { posts, products } from './store';
+import { posts, products, filters } from './store';
 
 export const App = () => {
   return (
@@ -8,7 +8,7 @@ export const App = () => {
       <Header />
       <main className=" mt-20 ">
         {/* <Home posts={posts} /> */}
-        <Catalog products={products} />
+        <Catalog products={products} filters={filters} />
       </main>
       <Footer />
     </>

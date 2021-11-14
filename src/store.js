@@ -62,3 +62,21 @@ export const products = [
     price: '199',
   },
 ];
+
+export const filters = [
+  {
+    id: 1,
+    name: 'Filter #1',
+    variants: ['lower price', 'upper price', 'popular'],
+  },
+  {
+    id: 2,
+    name: 'Filter #2',
+    variants: ['lower price', 'upper price', 'popular'],
+  },
+  {
+    id: 3,
+    name: 'Filter #3',
+    variants: ['lower price', 'upper price', 'popular'],
+  },
+];
