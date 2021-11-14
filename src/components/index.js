@@ -6,4 +6,5 @@ export { Footer } from './Footer';
 export { Logo } from './Logo';
 export { Post } from './Post';
 export { Card } from './Card';
+export { Select } from './Select';
 export { Search } from './Search';
