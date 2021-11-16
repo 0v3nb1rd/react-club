@@ -1,8 +1,12 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 export const Card = ({ product }) => {
+  let navigate = useNavigate();
+  const clicked = () => navigate(`${product.id}`);
+
   return (
-    <div className="max-w-xs	h-full">
+    <div className="max-w-xs h-full">
       <div className=" relative bg-gradient-to-bl from-yellow-100 to-purple-300 shadow-lg sm:rounded-3xl p-8 pt-14  transition transform hover:scale-105 ">
         <div className=" absolute z-10 -inset-x-0 top-0 bg-gradient-to-r from-gray-300 to-yellow-100  h-14 rounded-t-lg ">
           <p className="p-3 leading-7 font-mono text-xl">Item {product.id}</p>
@@ -27,7 +31,9 @@ export const Card = ({ product }) => {
           </p>
         </div>
         <div className="mt-4">
-          <a className="btn btn-natural btn-block">View more</a>
+          <a onClick={clicked} className="btn btn-natural btn-block">
+            View more
+          </a>
         </div>
       </div>
     </div>
