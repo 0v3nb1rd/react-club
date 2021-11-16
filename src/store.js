@@ -7,6 +7,9 @@ import productKindle from './assets/img/products/kindle.png';
 import productMac from './assets/img/products/mac.png';
 import productMonitor from './assets/img/products/aoc.png';
 
+const _allCategories = ['phones', 'computers', 'monitors', 'ebooks'];
+const _allBrends = ['apple', 'aoc', 'amazon'];
+
 export const posts = [
   {
     title: 'This is the first title',
@@ -36,6 +39,9 @@ export const products = [
       "Introduced on September 14, the iPhone 13 and iPhone 13 mini are Apple's newest flagship iPhones on the more affordable end, and are being sold alongside the more expensive iPhone 13 Pro and iPhone 13 Pro Max...",
     img: productPhone,
     price: '999',
+    route: 'iphone13pro',
+    category: _allCategories[0],
+    brend: _allBrends[0],
   },
   {
     id: '2',
@@ -44,6 +50,9 @@ export const products = [
       "Apple is continuing it's crusade to banish Intel from its lineup with two more processors: the M1 Pro and M1 Max, professional-grade processors debuting in the 14-inch and 16-inch MacBook Pros...",
     img: productMac,
     price: '2499',
+    route: 'macbookmax',
+    category: _allCategories[1],
+    brend: _allBrends[0],
   },
   {
     id: '3',
@@ -52,6 +61,9 @@ export const products = [
       'With decades of experience, our technological expertise forms the basis of AOC’s best quality led &amp; lcd monitors. Our engineers incorporate the latest innovations into AOC’s computer monitors...',
     img: productMonitor,
     price: '1099',
+    route: 'aocmonitor4k',
+    category: _allCategories[2],
+    brend: _allBrends[1],
   },
   {
     id: '4',
@@ -60,23 +72,26 @@ export const products = [
       'Lucky for us, we can use special snippets of code in our Amazon listings to access their font styles. All you need to do is type the right things around the sentences in your product description to make the words stand out and look great...',
     img: productKindle,
     price: '199',
+    route: 'amazonkindle',
+    category: _allCategories[3],
+    brend: _allBrends[2],
   },
 ];
 
 export const filters = [
   {
     id: 1,
-    name: 'Filter №1',
-    variants: ['lower price', 'upper price', 'popular'],
+    name: 'All categories',
+    variants: _allCategories,
   },
   {
     id: 2,
-    name: 'Filter №2',
-    variants: ['high', 'upper price', 'popular'],
+    name: 'All brends',
+    variants: _allBrends,
   },
   {
     id: 3,
-    name: 'Filter №3',
-    variants: ['lower price', 'some inner', 'other'],
+    name: 'sot By name',
+    variants: ['lower price', 'upper price'],
   },
 ];
