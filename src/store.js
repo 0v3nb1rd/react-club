@@ -7,10 +7,52 @@ import productKindle from './assets/img/products/kindle.png';
 import productMac from './assets/img/products/mac.png';
 import productMonitor from './assets/img/products/aoc.png';
 
-const _allCategories = ['phones', 'computers', 'monitors', 'ebooks'];
-const _allBrends = ['apple', 'aoc', 'amazon'];
+const _allCategories = [
+  'all category',
+  'phones',
+  'computers',
+  'monitors',
+  'ebooks',
+];
+const _allBrends = ['all brends', 'apple', 'aoc', 'amazon'];
 
 export const posts = [
+  {
+    title: 'This is the first title',
+    desc:
+      'First reiciendis beatae tenetur excepturi aut pariatur est eos. Sit sit necessitatibus veritatis sed molestiae voluptates incidunt iure sapiente..',
+    img: postImg1,
+  },
+  {
+    title: 'This is the second title',
+    desc:
+      'Second reiciendis beatae tenetur excepturi aut pariatur est eos. Sit sit necessitatibus veritatis sed molestiae voluptates incidunt iure sapiente...',
+    img: postImg2,
+  },
+  {
+    title: 'This is the third title',
+    desc:
+      'Third reiciendis beatae tenetur excepturi aut pariatur est eos. Sit sit necessitatibus veritatis sed molestiae voluptates incidunt iure sapiente...',
+    img: postImg3,
+  },
+  {
+    title: 'This is the third title',
+    desc:
+      'Third reiciendis beatae tenetur excepturi aut pariatur est eos. Sit sit necessitatibus veritatis sed molestiae voluptates incidunt iure sapiente...',
+    img: postImg3,
+  },
+  {
+    title: 'This is the first title',
+    desc:
+      'First reiciendis beatae tenetur excepturi aut pariatur est eos. Sit sit necessitatibus veritatis sed molestiae voluptates incidunt iure sapiente..',
+    img: postImg1,
+  },
+  {
+    title: 'This is the second title',
+    desc:
+      'Second reiciendis beatae tenetur excepturi aut pariatur est eos. Sit sit necessitatibus veritatis sed molestiae voluptates incidunt iure sapiente...',
+    img: postImg2,
+  },
   {
     title: 'This is the first title',
     desc:
@@ -40,8 +82,8 @@ export const products = [
     img: productPhone,
     price: '999',
     route: 'iphone13pro',
-    category: _allCategories[0],
-    brend: _allBrends[0],
+    category: _allCategories[1],
+    brend: _allBrends[1],
   },
   {
     id: '2',
@@ -51,8 +93,8 @@ export const products = [
     img: productMac,
     price: '2499',
     route: 'macbookmax',
-    category: _allCategories[1],
-    brend: _allBrends[0],
+    category: _allCategories[2],
+    brend: _allBrends[1],
   },
   {
     id: '3',
@@ -62,8 +104,8 @@ export const products = [
     img: productMonitor,
     price: '1099',
     route: 'aocmonitor4k',
-    category: _allCategories[2],
-    brend: _allBrends[1],
+    category: _allCategories[3],
+    brend: _allBrends[2],
   },
   {
     id: '4',
@@ -73,8 +115,8 @@ export const products = [
     img: productKindle,
     price: '199',
     route: 'amazonkindle',
-    category: _allCategories[3],
-    brend: _allBrends[2],
+    category: _allCategories[4],
+    brend: _allBrends[3],
   },
 ];
 
@@ -92,6 +134,6 @@ export const filters = [
   {
     id: 3,
     name: 'sot By name',
-    variants: ['lower price', 'upper price'],
+    variants: ['sort by name', 'lower price', 'upper price'],
   },
 ];
