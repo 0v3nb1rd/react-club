@@ -76,6 +76,7 @@ export const posts = [
 export const products = [
   {
     id: '1',
+    cardName: 'Item 1',
     title: 'Iphone 13pro',
     shortText:
       "Introduced on September 14, the iPhone 13 and iPhone 13 mini are Apple's newest flagship iPhones on the more affordable end, and are being sold alongside the more expensive iPhone 13 Pro and iPhone 13 Pro Max...",
@@ -87,6 +88,7 @@ export const products = [
   },
   {
     id: '2',
+    cardName: 'Item 2',
     title: 'MacBook Max',
     shortText:
       "Apple is continuing it's crusade to banish Intel from its lineup with two more processors: the M1 Pro and M1 Max, professional-grade processors debuting in the 14-inch and 16-inch MacBook Pros...",
@@ -98,6 +100,7 @@ export const products = [
   },
   {
     id: '3',
+    cardName: 'Item 3',
     title: 'AOC Monitor 4K',
     shortText:
       'With decades of experience, our technological expertise forms the basis of AOC’s best quality led &amp; lcd monitors. Our engineers incorporate the latest innovations into AOC’s computer monitors...',
@@ -109,6 +112,7 @@ export const products = [
   },
   {
     id: '4',
+    cardName: 'Item 4',
     title: 'Amazon Kindle',
     shortText:
       'Lucky for us, we can use special snippets of code in our Amazon listings to access their font styles. All you need to do is type the right things around the sentences in your product description to make the words stand out and look great...',
@@ -118,22 +122,70 @@ export const products = [
     category: _allCategories[4],
     brend: _allBrends[3],
   },
+  {
+    id: '5',
+    cardName: 'Item 5',
+    title: 'ASUS Roc',
+    shortText:
+      'With decades of experience, our technological expertise forms the basis of AOC’s best quality led &amp; lcd monitors. Our engineers incorporate the latest innovations into AOC’s computer monitors...',
+    img: productMonitor,
+    price: '1099',
+    route: 'aocmonitor4k',
+    category: _allCategories[3],
+    brend: _allBrends[2],
+  },
+  {
+    id: '6',
+    cardName: 'Item 6',
+    title: 'Amazon Kindle',
+    shortText:
+      'Lucky for us, we can use special snippets of code in our Amazon listings to access their font styles. All you need to do is type the right things around the sentences in your product description to make the words stand out and look great...',
+    img: productKindle,
+    price: '199',
+    route: 'amazonkindle',
+    category: _allCategories[4],
+    brend: _allBrends[3],
+  },
+  {
+    id: '7',
+    cardName: 'Item 7',
+    title: 'Iphone 13pro',
+    shortText:
+      "Introduced on September 14, the iPhone 13 and iPhone 13 mini are Apple's newest flagship iPhones on the more affordable end, and are being sold alongside the more expensive iPhone 13 Pro and iPhone 13 Pro Max...",
+    img: productPhone,
+    price: '999',
+    route: 'iphone13pro',
+    category: _allCategories[1],
+    brend: _allBrends[1],
+  },
+  {
+    id: '8',
+    cardName: 'Item 8',
+    title: 'MacBook Max',
+    shortText:
+      "Apple is continuing it's crusade to banish Intel from its lineup with two more processors: the M1 Pro and M1 Max, professional-grade processors debuting in the 14-inch and 16-inch MacBook Pros...",
+    img: productMac,
+    price: '2499',
+    route: 'macbookmax',
+    category: _allCategories[2],
+    brend: _allBrends[1],
+  },
 ];
 
 export const filters = [
   {
     id: 1,
-    name: 'All categories',
+    name: 'all category',
     variants: _allCategories,
   },
   {
     id: 2,
-    name: 'All brends',
+    name: 'all brends',
     variants: _allBrends,
   },
   {
     id: 3,
-    name: 'sot By name',
+    name: 'sort by name',
     variants: ['sort by name', 'lower price', 'upper price'],
   },
 ];

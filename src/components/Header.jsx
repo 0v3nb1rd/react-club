@@ -1,6 +1,5 @@
 import React from 'react';
 import { Nav, Logo } from '.';
-import { Search } from './Search';
 
 export const Header = () => {
   return (
@@ -8,7 +7,6 @@ export const Header = () => {
       <div className="container  mx-auto relative">
         <Logo className="absolute" />
         <Nav />
-        <Search />
       </div>
     </header>
   );

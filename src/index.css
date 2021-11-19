@@ -24,6 +24,7 @@ header {
 }
 
 #root {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -35,4 +36,8 @@ p.clump5 {
   -webkit-line-clamp: 5;
   -webkit-box-orient: vertical;
   overflow: hidden;
+}
+
+.z-110 {
+  z-index: 110;
 }

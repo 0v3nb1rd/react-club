@@ -1,8 +1,24 @@
 import React from 'react';
+import cn from 'classnames';
 
-export const Search = () => {
+export const Search = ({ className, searchFunc }) => {
+  const [query, setQuery] = React.useState('');
+  const searchImput = (e) => {
+    setQuery(e.target.value);
+  };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    searchFunc(query);
+  };
+
   return (
-    <div className="absolute right-0 flex items-center w-full lg:w-72 h-full group">
+    <form
+      onSubmit={handleSubmit}
+      className={cn(
+        'right-0 flex items-center w-full lg:w-72 group',
+        className
+      )}
+    >
       <div className="absolute z-50 flex items-center justify-center w-auto h-10 p-3 pr-2 text-sm text-gray-500 uppercase cursor-pointer sm:hidden">
         <svg
           fill="none"
@@ -25,12 +41,11 @@ export const Search = () => {
       </svg>
       <input
         type="text"
+        value={query}
+        onChange={searchImput.bind(this)}
         className="block w-full h-full py-1.5 pl-10 pr-4 leading-normal rounded-2xl focus:border-transparent focus:outline-none focus:ring-2 transition focus:ring-blue-200 ring-opacity-90 bg-gray-100 dark:bg-gray-800 text-gray-400 aa-input"
         placeholder="Search"
       />
-      <div className="absolute cursor-pointer bg-white right-0 hidden h-auto px-2 py-1 mr-2 text-xs text-gray-400 border border-gray-300 rounded-2xl md:block">
-        +
-      </div>
-    </div>
+    </form>
   );
 };

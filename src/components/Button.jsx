@@ -2,7 +2,11 @@ import React from 'react';
 import cn from 'classnames';
 
 export const Button = (props) => {
-  const { className, children } = props;
+  const { onClick, className, children } = props;
 
-  return <button className={cn('btn', className)}>{children}</button>;
+  return (
+    <button onClick={onClick} className={cn('btn', className)}>
+      {children}
+    </button>
+  );
 };

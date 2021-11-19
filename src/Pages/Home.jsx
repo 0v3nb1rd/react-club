@@ -3,7 +3,7 @@ import { Hero, Post, Button } from '../components';
 
 export const Home = ({ posts }) => {
   const ITEMS_ON_PAGE = 3;
-  const [items, setItems] = React.useState(posts);
+  const [items] = React.useState(posts);
   const [visible, setVisible] = React.useState(ITEMS_ON_PAGE);
   const showMoreItems = () => {
     setVisible((prev) => prev + ITEMS_ON_PAGE);

@@ -18,8 +18,12 @@ export const Item = ({ products }) => {
 
           <div>
             <div className="badges mb-4">
-              <div className="badge badge-primary mx-2">Monitors</div>
-              <div className="badge badge-secondary mx-2">television</div>
+              <div className="badge badge-primary mx-2">
+                {curentProduct.category}
+              </div>
+              <div className="badge badge-secondary mx-2">
+                {curentProduct.brend}
+              </div>
             </div>
 
             <h1 className="mb-5 text-5xl font-bold">{curentProduct.title}</h1>
