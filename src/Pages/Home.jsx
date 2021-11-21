@@ -5,6 +5,7 @@ export const Home = ({ posts }) => {
   const ITEMS_ON_PAGE = 3;
   const [items] = React.useState(posts);
   const [visible, setVisible] = React.useState(ITEMS_ON_PAGE);
+
   const showMoreItems = () => {
     setVisible((prev) => prev + ITEMS_ON_PAGE);
   };

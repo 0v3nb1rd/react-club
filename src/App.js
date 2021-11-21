@@ -1,10 +1,24 @@
+import React from 'react';
 import { Header, Footer } from './components';
 import { Home, Catalog, Item } from './Pages';
 import { posts, products, filters } from './store';
-
 import { Routes, Route } from 'react-router-dom';
+// import axios from 'axios';
 
 export const App = () => {
+  // React.useEffect(() => {
+  //   axios.get('http://localhost:3110/all-products').then(({ data }) => {
+  //     setItems(data);
+  //     // setTimeout(() => setSpinner(false), 500);
+  //   });
+  // }, []);
+
+  // const product = (prod) => {
+  //   return () => {
+  //     console.log(prod);
+  //   };
+  // };
+
   return (
     <>
       <Header />

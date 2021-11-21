@@ -1,46 +1,70 @@
 import React from 'react';
 import { Button, Card, Select, Search } from '../components';
+import { Spinner } from '../components';
+import axios from 'axios';
 
 export const Catalog = ({ products, filters }) => {
-  const [items, setItems] = React.useState(products);
+  const [items, setItems] = React.useState([]);
+  const [spinner, setSpinner] = React.useState(true);
 
   const refFilterBy = React.useRef();
 
+  React.useEffect(() => {
+    axios.get('http://localhost:3110/products').then(({ data }) => {
+      setItems(data);
+      setTimeout(() => setSpinner(false), 500);
+    });
+  }, []);
+
   const onFilterClick = (e) => {
-    const [catName, brandName, sortVal] = refFilterBy.current.querySelectorAll(
-      '.filterBy'
-    );
-    filterByCat(catName.textContent);
-    filterByBrend(brandName.textContent);
-    SortBy(sortVal.textContent);
+    const catName = ['cat', 'brend', 'sortBy'];
+    const filterParam = [];
+    refFilterBy.current.querySelectorAll('.filterBy').forEach((el, idx) => {
+      filterParam.push(`${catName[idx]}=${el.textContent.replace(/ /g, '')}`);
+    });
+    const param = '?' + filterParam.join('&');
+
+    axios.get(`http://localhost:3110/${param}`).then(({ data }) => {
+      // console.log(data);
+      return data;
+      // setItems(data);
+      // setTimeout(() => setSpinner(false), 500);
+    });
+
+    // const [catName, brandName, sortVal] = refFilterBy.current.querySelectorAll(
+    //   '.filterBy'
+    // );
+    // filterByCat(catName.textContent);
+    // filterByBrend(brandName.textContent);
+    // SortBy(sortVal.textContent);
   };
 
-  const filterByCat = (catName) => {
-    if (catName === filters[0].name) return;
+  // ! Filters && Sort
+  // const filterByCat = (catName) => {
+  //   if (catName === filters[0].name) return;
 
-    setItems((el) => products.filter((itm) => itm.category === catName));
-  };
-  const filterByBrend = (brandName) => {
-    if (brandName === filters[1].name) return;
+  //   setItems((el) => products.filter((itm) => itm.category === catName));
+  // };
 
-    setItems((el) => products.filter((itm) => itm.brend === brandName));
+  // const filterByBrend = (brandName) => {
+  //   if (brandName === filters[1].name) return;
 
-    console.log(brandName);
-  };
+  //   setItems((el) => products.filter((itm) => itm.brend === brandName));
+  // };
+  // const SortBy = (sortVal) => {
+  //   if (sortVal === filters[2].name) {
+  //     return;
+  //     // return setItems((items) => [...items]);
+  //   }
+  //   if (sortVal === 'lower price') {
+  //     setItems([...products].sort((prev, next) => prev.price - next.price));
+  //   }
+  //   if (sortVal === 'upper price') {
+  //     setItems([...products].sort((prev, next) => next.price - prev.price));
+  //   }
+  // };
 
-  const SortBy = (sortVal) => {
-    if (sortVal === filters[2].name) {
-      return;
-      // return setItems((items) => [...items]);
-    }
-    if (sortVal === 'lower price') {
-      setItems([...products].sort((prev, next) => prev.price - next.price));
-    }
-    if (sortVal === 'upper price') {
-      setItems([...products].sort((prev, next) => next.price - prev.price));
-    }
-  };
-
+  //// ! Serch input
   const dataSerchProducts = (query) => {
     const newItem = products.filter((itm) => {
       return Object.keys(itm).some((key) =>
@@ -78,14 +102,17 @@ export const Catalog = ({ products, filters }) => {
         </div>
       </section>
       <section className="container  mx-auto mt-3 mb-10">
-        <ul className="flex  items-stretch flex-wrap">
-          {items &&
-            items.map((el) => (
+        {spinner ? (
+          <Spinner className="" />
+        ) : (
+          <ul className="flex  items-stretch flex-wrap">
+            {items.map((el) => (
               <li key={el.id} className="h-full my-4 mx-8">
                 <Card product={el} />
               </li>
             ))}
-        </ul>
+          </ul>
+        )}
       </section>
     </>
   );
