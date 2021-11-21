@@ -21,32 +21,31 @@ mongoose
   .then((res) => app.listen(PORT))
   .catch((err) => console.log(err.message));
 
-app.get('/', (req, res) => {
-  Product.find({})
-    .where('category')
-    .equals(req.query.cat)
-    .where('brend')
-    .equals(req.query.brend)
-    .exec((err, result) => {
-      res.send(result);
-    });
-  // res.send(`Hello ${req.query.cat} ${req.query.brend} ${req.query.sortBy}`);
-  // Product.find({
-  //   category: req.query.cat,
-  //   // brend: req.query.brend !== 'allbrends' ? req.query.brend : String,
-  //   // brend: req.query.brend,
-  // }).exec(function (err, orders) {
-  //   // populated and filtered twice
-  //   // console.log(orders);
-  //   res.send(orders);
-  // });
-  // .then((result) => res.send(result));
-});
-
 app.get('/products', (req, res) => {
   Product.find()
     .then((result) => res.send(result))
     .catch((err) => console.log(err));
+});
+
+app.get('/filter', (req, res) => {
+  const filterQuerys = {};
+  const sortQuery = {};
+
+  req.query.cat !== 'allcategory'
+    ? (filterQuerys.category = req.query.cat)
+    : null;
+  req.query.brend !== 'allbrends'
+    ? (filterQuerys.brend = req.query.brend)
+    : null;
+
+  req.query.sortBy === 'lowerprice' ? (sortQuery.price = 1) : null;
+  req.query.sortBy === 'upperprice' ? (sortQuery.price = -1) : null;
+
+  Product.find(filterQuerys)
+    .sort(sortQuery)
+    .exec((err, orders) => {
+      res.send(orders);
+    });
 });
 
 // app.get('/product:id', (req, res) => {
@@ -55,21 +54,21 @@ app.get('/products', (req, res) => {
 //     .catch((err) => console.log(err));
 // });
 
-app.get('/add', (req, res) => {
-  const product = new Product({
-    id: 8,
-    cardName: 'Item 8',
-    title: 'Asus ZenBook',
-    shortText:
-      "Assus laptop is awesome book electronics are the bane of the modern life. Perfectly functional gadgets sit quietly in a corner of the store room, doing nothing. If you're wondering what to do with old computer monitors, here are a few easy ideas to repurpose unused screens.",
-    img: 'https://i.ibb.co/HpMJJjV/asuszen.png',
-    price: 1089,
-    route: 'asuszenbook',
-    category: 'computers',
-    brend: 'assus',
-  });
-  product
-    .save()
-    .then((result) => res.send(result))
-    .catch((err) => console.log(err));
-});
+// app.get('/add', (req, res) => {
+//   const product = new Product({
+//     id: 8,
+//     cardName: 'Item 8',
+//     title: 'Asus ZenBook',
+//     shortText:
+//       "Assus laptop is awesome book electronics are the bane of the modern life. Perfectly functional gadgets sit quietly in a corner of the store room, doing nothing. If you're wondering what to do with old computer monitors, here are a few easy ideas to repurpose unused screens.",
+//     img: 'https://i.ibb.co/HpMJJjV/asuszen.png',
+//     price: 1089,
+//     route: 'asuszenbook',
+//     category: 'computers',
+//     brend: 'assus',
+//   });
+//   product
+//     .save()
+//     .then((result) => res.send(result))
+//     .catch((err) => console.log(err));
+// });
