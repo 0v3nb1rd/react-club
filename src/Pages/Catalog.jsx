@@ -25,7 +25,9 @@ export const Catalog = ({ products, filters }) => {
     const param = '?' + filterParam.join('&');
 
     axios.get(`http://localhost:3110/filter/${param}`).then(({ data }) => {
-      return data;
+      // return data;
+      console.log(data);
+      setItems([...data]);
       // setItems(data);
       // setTimeout(() => setSpinner(false), 500);
     });
