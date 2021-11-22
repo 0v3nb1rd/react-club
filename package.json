@@ -21,11 +21,11 @@
     "web-vitals": "^1.1.2"
   },
   "scripts": {
-    "start": "craco start & nodemon src/server/index.js",
+    "start": "craco start & nodemon ./src/server/index.js ",
     "build": "craco build",
     "test": "craco test",
     "eject": "react-scripts eject",
-    "serv": "nodemon src/server/index.js"
+    "serv": "nodemon ./src/server/index.js"
   },
   "eslintConfig": {
     "extends": [

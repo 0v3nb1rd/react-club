@@ -27,6 +27,16 @@ app.get('/products', (req, res) => {
     .catch((err) => console.log(err));
 });
 
+app.get('/product/:id', async (req, res) => {
+  try {
+    const product = await Product.findById(req.params['id']);
+    res.send(product);
+  } catch (e) {
+    res.status(500);
+    res.end();
+  }
+});
+
 app.get('/filter', (req, res) => {
   const filterQuerys = {};
   const sortQuery = {};

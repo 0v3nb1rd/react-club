@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 
 export const Card = ({ product }) => {
   let navigate = useNavigate();
-  const clicked = () => navigate(`${product.id}`);
+  const clicked = () => navigate(`${product._id}`);
 
   return (
     <div className="max-w-xs h-full">
