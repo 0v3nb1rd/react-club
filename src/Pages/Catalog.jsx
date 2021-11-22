@@ -25,45 +25,10 @@ export const Catalog = ({ products, filters }) => {
     const param = '?' + filterParam.join('&');
 
     axios.get(`http://localhost:3110/filter/${param}`).then(({ data }) => {
-      // return data;
       console.log(data);
       setItems([...data]);
-      // setItems(data);
-      // setTimeout(() => setSpinner(false), 500);
     });
-
-    // const [catName, brandName, sortVal] = refFilterBy.current.querySelectorAll(
-    //   '.filterBy'
-    // );
-    // filterByCat(catName.textContent);
-    // filterByBrend(brandName.textContent);
-    // SortBy(sortVal.textContent);
   };
-
-  // ! Filters && Sort
-  // const filterByCat = (catName) => {
-  //   if (catName === filters[0].name) return;
-
-  //   setItems((el) => products.filter((itm) => itm.category === catName));
-  // };
-
-  // const filterByBrend = (brandName) => {
-  //   if (brandName === filters[1].name) return;
-
-  //   setItems((el) => products.filter((itm) => itm.brend === brandName));
-  // };
-  // const SortBy = (sortVal) => {
-  //   if (sortVal === filters[2].name) {
-  //     return;
-  //     // return setItems((items) => [...items]);
-  //   }
-  //   if (sortVal === 'lower price') {
-  //     setItems([...products].sort((prev, next) => prev.price - next.price));
-  //   }
-  //   if (sortVal === 'upper price') {
-  //     setItems([...products].sort((prev, next) => next.price - prev.price));
-  //   }
-  // };
 
   //// ! Serch input
   const dataSerchProducts = (query) => {
